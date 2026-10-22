@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: var(--font-poppins), sans-serif;
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-navigation: var(--font-poppins), sans-serif;
+  --color-bg-main: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-light: #ffffff;
+  --color-bg-alt: #f2f8ff;
+  --color-primary: #0b3d91;
+  --color-primary-dark: #082d69;
+  --color-primary-light: #1451aa;
+  --color-secondary: #b9dcff;
+  --color-accent: #0b3d91;
+  --color-accent-light: #4b9cff;
+  --color-text: #354969;
+  --color-text-light: #6b7f9d;
+  --color-border: #d8eaff;
+  --color-heading: #0b2f70;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-neutral: #6b7280;
+  --shadow-mobile-menu: 0 18px 45px rgba(11, 61, 145, 0.16);
+  --shadow-play-ring: 0 0 0 14px rgba(255, 255, 255, 0.18);
+  --shadow-hero-card: 0 12px 32px rgba(11, 61, 145, 0.12);
+  --shadow-testimonial: 0 14px 45px rgba(11, 61, 145, 0.08);
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-bg-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}

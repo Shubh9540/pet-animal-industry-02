@@ -1,0 +1,1793 @@
+{
+  "common": {
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-poppins), sans-serif",
+        "heading": "var(--font-poppins), sans-serif",
+        "navigation": "var(--font-poppins), sans-serif"
+      }
+    },
+    "metadata": {
+      "title": "PETLIO | Pet Care",
+      "description": "PETLIO provides complete pet care, grooming, training, and wellness services with love and attention.",
+      "icon": "/main logo/logo.webp"
+    },
+    "globalUI": {
+      "breadcrumbSeparator": "›",
+      "breadcrumbImage": "/banner/hero banner.webp"
+    },
+    "Footer": {
+      "logo": "/main logo/logo.webp",
+      "logoAlt": "PETLIO Pet Care Logo",
+      "logoUrl": "/",
+      "footerImage": "/main logo/footer_image.webp",
+      "footerImageAlt": "PETLIO pets — dog and cat",
+      "copyrightText": "© 2026 PETLIO Pet Care. All rights reserved. Powered By Lestow",
+      "quickLinksTitle": "MENU",
+      "contactTitle": "CONTACT",
+      "socialTitle": "SOCIAL",
+      "socialLinks": [
+        {
+          "id": "social-facebook",
+          "icon": "FaFacebookF",
+          "label": "Facebook",
+          "url": "https://facebook.com"
+        },
+        {
+          "id": "social-linkedin",
+          "icon": "FaLinkedinIn",
+          "label": "LinkedIn",
+          "url": "https://linkedin.com"
+        },
+        {
+          "id": "social-youtube",
+          "icon": "FaYoutube",
+          "label": "YouTube",
+          "url": "https://youtube.com"
+        }
+      ],
+      "quickLinks": [
+        {
+          "id": "quick-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "quick-about",
+          "label": "About Us",
+          "url": "/about"
+        },
+        {
+          "id": "quick-services",
+          "label": "Services",
+          "url": "/services"
+        },
+        {
+          "id": "quick-team",
+          "label": "Our Team",
+          "url": "/team"
+        },
+        {
+          "id": "quick-gallery",
+          "label": "Gallery",
+          "url": "/gallery"
+        },
+        {
+          "id": "quick-contact",
+          "label": "Contact Us",
+          "url": "/contact"
+        }
+      ],
+      "contactItems": [
+        {
+          "id": "contact-address",
+          "icon": "FaMapMarkerAlt",
+          "value": "123 Main St, New York, NY, USA",
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+St%2C+New+York%2C+NY%2C+USA"
+        },
+        {
+          "id": "contact-phone",
+          "icon": "FaPhoneAlt",
+          "value": "+1-000-000-000",
+          "url": "tel:+1000000000"
+        },
+        {
+          "id": "contact-email",
+          "icon": "FaEnvelope",
+          "value": "info@xyz.com",
+          "url": "mailto:info@xyz.com"
+        }
+      ]
+    },
+    "notFound": {
+      "code": "404",
+      "title": "Oops! Page Not Found",
+      "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+      "buttonText": "Back to Home",
+      "buttonUrl": "/"
+    },
+    "aboutBreadcrumb": {
+      "title": "About Us",
+      "paths": [
+        {
+          "id": "breadcrumb-about-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-about-current",
+          "label": "About Us"
+        }
+      ]
+    },
+    "servicesBreadcrumb": {
+      "title": "Our Services",
+      "paths": [
+        {
+          "id": "breadcrumb-services-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-services-current",
+          "label": "Our Services"
+        }
+      ]
+    },
+    "faqsBreadcrumb": {
+      "title": "Faqs",
+      "paths": [
+        {
+          "id": "breadcrumb-faqs-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-faqs-current",
+          "label": "Faqs"
+        }
+      ]
+    },
+    "contactBreadcrumb": {
+      "title": "Contact Us",
+      "paths": [
+        {
+          "id": "breadcrumb-contact-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-contact-current",
+          "label": "Contact Us"
+        }
+      ]
+    },
+    "bookAppointmentBreadcrumb": {
+      "title": "Book an Appointment",
+      "paths": [
+        {
+          "id": "breadcrumb-book-event-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-book-event-current",
+          "label": "Book an Appointment"
+        }
+      ]
+    },
+    "galleryBreadcrumb": {
+      "title": "Our Gallery",
+      "paths": [
+        {
+          "id": "breadcrumb-gallery-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-gallery-current",
+          "label": "Our Gallery"
+        }
+      ]
+    },
+    "teamBreadcrumb": {
+      "title": "Our Teams",
+      "paths": [
+        {
+          "id": "breadcrumb-team-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-team-current",
+          "label": "Our Teams"
+        }
+      ]
+    },
+    "pricingBreadcrumb": {
+      "title": "Pricing",
+      "paths": [
+        {
+          "id": "breadcrumb-pricing-home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "breadcrumb-pricing-current",
+          "label": "Pricing"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "Pet": {
+      "sections": {
+        "TopBar": {
+          "variants": {}
+        },
+        "Header": {
+          "variants": {
+            "PetHeader2": {
+              "logo": "/main logo/logo.webp",
+              "logoAlt": "PETLIO Pet Care",
+              "logoUrl": "/",
+              "navLinksLeft": [
+                {
+                  "id": "nav-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "nav-about",
+                  "label": "About Us",
+                  "url": "/about"
+                },
+                {
+                  "id": "nav-services",
+                  "label": "Services",
+                  "url": "/services"
+                },
+                {
+                  "id": "nav-gallery",
+                  "label": "Gallery",
+                  "url": "/gallery"
+                },
+                {
+                  "id": "nav-blog",
+                  "label": "Blog",
+                  "url": "/faqs"
+                },
+                {
+                  "id": "nav-contact",
+                  "label": "Contact Us",
+                  "url": "/contact"
+                }
+              ],
+              "navLinksRight": [],
+              "contactButton": {
+                "text": "Book an Appointment",
+                "url": "/book-an-appointment",
+                "icon": "FaCalendarAlt"
+              },
+              "openMenuLabel": "Open navigation menu",
+              "closeMenuLabel": "Close navigation menu",
+              "phoneNumber": "+1-000-000-0000",
+              "phoneUrl": "tel:+10000000000",
+              "phoneCaption": "Speak to Our Pet Care Expert",
+              "favoritesUrl": "/book-an-appointment",
+              "favoritesLabel": "Book an Appointment"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "PetHero2": {
+              "titleLine1": "Smarter",
+              "highlightedTitle": "Everyday",
+              "image": "/banner/1-outlined-v2.webp",
+              "imageAlt": "A golden retriever sitting with a fluffy cat",
+              "titleLine2": "Pet Care",
+              "trustLead": "Trusted by pet parents across cities for",
+              "trustHighlight": "happier, healthier pets.",
+              "ctaText": "Book an Appointment",
+              "ctaUrl": "/book-an-appointment",
+              "ctaIconLabel": "Paw icon"
+            }
+          }
+        },
+        "AboutUs": {
+          "variants": {
+            "PetAboutUs2": {
+              "titleLine1": "Your Partner",
+              "highlightedTitle": "Pet Care",
+              "description": "At PETLIO, we combine advanced veterinary care with a gentle, caring touch. We?re dedicated to keeping your pets healthy, happy and by your side for a brighter tomorrow.",
+              "imageMain": "/about/about.webp",
+              "imageMainAlt": "A veterinarian caring for a golden retriever and a cat",
+              "eyebrow": "ABOUT PETLIO",
+              "titleLine2": "in",
+              "buttonText": "About Us",
+              "buttonUrl": "/about"
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "PetGallery2": {
+              "openLabel": "Open gallery image",
+              "closeLabel": "Close gallery image",
+              "previousLabel": "Previous gallery image",
+              "nextLabel": "Next gallery image",
+              "images": [
+                {
+                  "id": "gallery-pet-1",
+                  "image": "/gallery/g1.jpg",
+                  "imageAlt": "A veterinarian checking a golden retriever with its family",
+                  "category": "veterinary-care"
+                },
+                {
+                  "id": "gallery-pet-2",
+                  "image": "/gallery/g2.jpg",
+                  "imageAlt": "Veterinary team examining a golden retriever",
+                  "category": "veterinary-care"
+                },
+                {
+                  "id": "gallery-pet-3",
+                  "image": "/gallery/g3.jpg",
+                  "imageAlt": "A veterinarian caring for a small dog",
+                  "category": "veterinary-care"
+                },
+                {
+                  "id": "gallery-pet-4",
+                  "image": "/gallery/g4.jpg",
+                  "imageAlt": "A groomer carefully trimming a small dog",
+                  "category": "pet-grooming"
+                },
+                {
+                  "id": "gallery-pet-5",
+                  "image": "/gallery/g5.jpg",
+                  "imageAlt": "A happy dog enjoying a bath",
+                  "category": "pet-grooming"
+                },
+                {
+                  "id": "gallery-pet-6",
+                  "image": "/gallery/g6.jpg",
+                  "imageAlt": "A trainer working with a dog outdoors",
+                  "category": "dog-training"
+                },
+                {
+                  "id": "gallery-pet-7",
+                  "image": "/gallery/g7.jpg",
+                  "imageAlt": "A groomer trimming a dog in the salon",
+                  "category": "pet-grooming"
+                },
+                {
+                  "id": "gallery-pet-8",
+                  "image": "/gallery/g8.jpg",
+                  "imageAlt": "Veterinarians caring for a small dog",
+                  "category": "veterinary-care"
+                },
+                {
+                  "id": "gallery-pet-9",
+                  "image": "/gallery/g9.jpg",
+                  "imageAlt": "A pet parent brushing a golden retriever",
+                  "category": "pet-sitting"
+                },
+                {
+                  "id": "gallery-pet-10",
+                  "image": "/gallery/g10.jpg",
+                  "imageAlt": "A dog enjoying a professional grooming session",
+                  "category": "pet-grooming"
+                },
+                {
+                  "id": "gallery-pet-11",
+                  "image": "/gallery/g11.jpg",
+                  "imageAlt": "A groomer caring for a small dog",
+                  "category": "pet-grooming"
+                },
+                {
+                  "id": "gallery-pet-12",
+                  "image": "/gallery/g12.jpg",
+                  "imageAlt": "A veterinarian examining a pet",
+                  "category": "veterinary-care"
+                }
+              ],
+              "subtitle": "OUR GALLERY",
+              "title": "Moments of Happy Pets",
+              "description": "Explore our gallery to see the care, love and attention we provide to our furry friends. From grooming sessions to training, medical care and joyful moments, capture the happiness and trust we build with every pet.",
+              "pageLabel": "Go to page",
+              "itemsPerPage": 6,
+              "categories": [
+                {
+                  "id": "all",
+                  "label": "All"
+                },
+                {
+                  "id": "pet-grooming",
+                  "label": "Pet Grooming"
+                },
+                {
+                  "id": "veterinary-care",
+                  "label": "Veterinary Care"
+                },
+                {
+                  "id": "dog-training",
+                  "label": "Dog Training"
+                },
+                {
+                  "id": "pet-sitting",
+                  "label": "Pet Sitting"
+                }
+              ]
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "PetFaq2": {
+              "subtitle": "FAQS",
+              "title1": "Frequently Asked",
+              "highlightedTitle": "Questions",
+              "description": "Find answers to common questions about our pet care services, process, and what to expect.",
+              "expandLabel": "Expand answer",
+              "collapseLabel": "Collapse answer",
+              "items": [
+                {
+                  "id": "faq-options",
+                  "question": "What are my options?",
+                  "answer": "We offer grooming, bathing, nail trimming, coat care, and wellness services for pets."
+                },
+                {
+                  "id": "faq-switch-plan",
+                  "question": "Can I switch to a different plan?",
+                  "answer": "Yes. Your planning package can be adjusted as your celebration evolves, subject to availability and the services already confirmed."
+                },
+                {
+                  "id": "faq-non-disclosure",
+                  "question": "Do you offer non-disclosure signature?",
+                  "answer": "Yes. Our team can note your pet?s individual needs and care preferences before an appointment."
+                },
+                {
+                  "id": "faq-refunds",
+                  "question": "Do you issue refunds?",
+                  "answer": "Refund eligibility depends on the selected package, cancellation date and vendor commitments. All terms are clearly explained before confirmation."
+                },
+                {
+                  "id": "faq-advance-booking",
+                  "question": "How far in advance should we book your services?",
+                  "answer": "We recommend booking appointments in advance, especially during weekends and holiday periods."
+                },
+                {
+                  "id": "faq-travel-accommodation",
+                  "question": "Do you help with travel and accommodation for guests?",
+                  "answer": "Yes. Our pet care support can include travel guidance, accommodation coordination, transfers and guest hospitality."
+                },
+                {
+                  "id": "faq-event-size",
+                  "question": "Do you offer care for pets of different sizes?",
+                  "answer": "Yes. We plan intimate ceremonies as well as large multi-day celebrations, tailoring the team and planning process to suit your guest count."
+                },
+                {
+                  "id": "faq-custom-themes",
+                  "question": "Do you provide customised pet care themes and dÃ©cor?",
+                  "answer": "Yes. Our designers create personalised themes, floral concepts, colour palettes and decor details around your preferred style."
+                },
+                {
+                  "id": "faq-local-vendors",
+                  "question": "Will you coordinate with local vendors at the destination?",
+                  "answer": "Yes. We source, brief and coordinate trusted local vendors while maintaining one clear plan and timeline for the entire celebration."
+                },
+                {
+                  "id": "faq-get-started",
+                  "question": "How do we get started with PETLIO?",
+                  "answer": "Book an initial consultation and share your date, location, guest count and vision. Our team will then recommend the most suitable planning approach."
+                }
+              ],
+              "image": "/about/missionvison.webp",
+              "imageAlt": "A golden retriever and cat resting together"
+            }
+          }
+        },
+        "OurService": {
+          "variants": {
+            "PetOurService2": {
+              "subtitle": "OUR SERVICES",
+              "title": "Complete Care for",
+              "highlightedTitle": "All In One Place.",
+              "description": "Choose a single visit, build a regular routine or combine services around your week. PETLIO is designed to make pet care easier to manage.",
+              "linkText": "View All Services",
+              "services": [
+                {
+                  "id": "service-health-checkup",
+                  "number": "01",
+                  "title": "General Health Checkup",
+                  "description": "Complete health assessments to keep your pet in the best shape.",
+                  "icon": "FaStethoscope",
+                  "url": "/services/veterinary-care"
+                },
+                {
+                  "id": "service-vaccination-preventive-care",
+                  "number": "02",
+                  "title": "Vaccination & Preventive Care",
+                  "description": "Essential vaccines and preventive treatments for a healthier, safer life.",
+                  "icon": "FaSyringe",
+                  "url": "/services/veterinary-care"
+                },
+                {
+                  "id": "service-grooming-hygiene",
+                  "number": "03",
+                  "title": "Grooming & Hygiene",
+                  "description": "Gentle grooming, bathing and coat care for a clean and happy pet.",
+                  "icon": "FaCut",
+                  "url": "/services/pet-grooming"
+                },
+                {
+                  "id": "service-pet-daycare",
+                  "number": "04",
+                  "title": "Pet Daycare",
+                  "description": "Supervised play, attention and care while you?re away.",
+                  "icon": "FaHome",
+                  "url": "/services/pet-sitting"
+                },
+                {
+                  "id": "service-pet-boarding",
+                  "number": "05",
+                  "title": "Pet Boarding",
+                  "description": "A safe, comfortable stay with round-the-clock care.",
+                  "icon": "FaPaw",
+                  "url": "/services/pet-sitting"
+                }
+              ],
+              "titleLine1": "Everything",
+              "titleLine2": "They Need,",
+              "linkUrl": "/services"
+            }
+          }
+        },
+        "Care": {
+          "variants": {
+            "PetCare2": {
+              "eyebrow": "MOST LOVED",
+              "title": "Care That",
+              "highlightedTitle": "Feels Like Home.",
+              "description": "Play, rest, companionship and expert care — with updates so you're always in the loop.",
+              "image": "/about/1.webp",
+              "imageAlt": "A golden retriever and cat relaxing together in a pet clinic",
+              "arrowLabel": "Contact PETLIO",
+              "buttonUrl": "/contact"
+            }
+          }
+        },
+        "ServiceDetail": {
+          "variants": {
+            "PetServiceDetail2": {
+              "services": [
+                {
+                  "id": "pet-grooming",
+                  "title": "Pet Grooming",
+                  "image": "/service/bath&blow.jpg",
+                  "imageAlt": "A small dog enjoying a fresh bath and blow dry",
+                  "subtitle": "PROFESSIONAL PET GROOMING",
+                  "heading": "Gentle Grooming for a Healthier, Happier Pet",
+                  "description": "Our pet grooming services keep your furry friend clean, healthy, comfortable and looking their best. We use pet-friendly products and gentle techniques for a calm, stress-free visit. From bathing and brushing to haircuts and nail trimming, our groomers provide complete care with love and attention.",
+                  "highlights": [
+                    {
+                      "id": "grooming-highlight-coat",
+                      "title": "Healthy coat and skin",
+                      "icon": "FaBath"
+                    },
+                    {
+                      "id": "grooming-highlight-gentle",
+                      "title": "Gentle, patient handling",
+                      "icon": "FaHeart"
+                    },
+                    {
+                      "id": "grooming-highlight-clean",
+                      "title": "Pet-safe products",
+                      "icon": "FaPaw"
+                    },
+                    {
+                      "id": "grooming-highlight-style",
+                      "title": "Breed-aware styling",
+                      "icon": "FaDog"
+                    }
+                  ],
+                  "offerSubtitle": "CARE FROM NOSE TO TAIL",
+                  "offerTitle": "A Fresh, Comfortable Finish",
+                  "offerDescription": "Every grooming visit is tailored to your pet?s coat, comfort and individual needs.",
+                  "offers": [
+                    {
+                      "id": "grooming-offer-bath",
+                      "text": "Bathing and blow drying"
+                    },
+                    {
+                      "id": "grooming-offer-brush",
+                      "text": "Brushing and coat care"
+                    },
+                    {
+                      "id": "grooming-offer-haircut",
+                      "text": "Haircuts and breed styling"
+                    },
+                    {
+                      "id": "grooming-offer-nails",
+                      "text": "Nail trimming"
+                    },
+                    {
+                      "id": "grooming-offer-ears",
+                      "text": "Gentle ear cleaning"
+                    },
+                    {
+                      "id": "grooming-offer-check",
+                      "text": "Comfort checks throughout the visit"
+                    }
+                  ],
+                  "breadcrumb": {
+                    "title": "Pet Grooming",
+                    "paths": [
+                      {
+                        "id": "pet-grooming-breadcrumb-home",
+                        "label": "Home",
+                        "url": "/"
+                      },
+                      {
+                        "id": "pet-grooming-breadcrumb-services",
+                        "label": "Services",
+                        "url": "/services"
+                      },
+                      {
+                        "id": "pet-grooming-breadcrumb-current",
+                        "label": "Pet Grooming"
+                      }
+                    ]
+                  },
+                  "closingSubtitle": "ADDITIONAL BENEFITS",
+                  "closingTitle": "Healthy Pets, Happier Lives",
+                  "closingDescription": "Regular grooming helps maintain a clean coat, supports healthy skin, reduces shedding and keeps your pet comfortable in every season."
+                },
+                {
+                  "id": "veterinary-care",
+                  "title": "Veterinary Care",
+                  "image": "/service/fluffy-cat.jpg",
+                  "imageAlt": "Veterinarians providing a gentle examination to a cat",
+                  "subtitle": "COMPASSIONATE VETERINARY CARE",
+                  "heading": "Trusted Veterinary Care for Every Stage of Life",
+                  "description": "Our veterinary team brings thoughtful, thorough care to every visit. From preventive checkups to guidance when your pet is unwell, we focus on clear communication, gentle handling and care tailored to your companion.",
+                  "highlights": [
+                    {
+                      "id": "vet-highlight-checkups",
+                      "title": "Preventive checkups",
+                      "icon": "FaStethoscope"
+                    },
+                    {
+                      "id": "vet-highlight-team",
+                      "title": "Experienced care team",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "id": "vet-highlight-gentle",
+                      "title": "Gentle examinations",
+                      "icon": "FaHeart"
+                    },
+                    {
+                      "id": "vet-highlight-guidance",
+                      "title": "Clear pet-parent guidance",
+                      "icon": "FaComments"
+                    }
+                  ],
+                  "offerSubtitle": "HEALTH AND WELLNESS",
+                  "offerTitle": "Care That Helps Pets Thrive",
+                  "offerDescription": "We help you understand your pet?s health and make confident choices at every step.",
+                  "offers": [
+                    {
+                      "id": "vet-offer-exam",
+                      "text": "Routine wellness examinations"
+                    },
+                    {
+                      "id": "vet-offer-vaccinations",
+                      "text": "Vaccination guidance"
+                    },
+                    {
+                      "id": "vet-offer-health",
+                      "text": "Health and behaviour assessments"
+                    },
+                    {
+                      "id": "vet-offer-nutrition",
+                      "text": "Nutrition and lifestyle advice"
+                    },
+                    {
+                      "id": "vet-offer-followup",
+                      "text": "Follow-up care planning"
+                    },
+                    {
+                      "id": "vet-offer-parent",
+                      "text": "Support for pet parents"
+                    }
+                  ],
+                  "breadcrumb": {
+                    "title": "Veterinary Care",
+                    "paths": [
+                      {
+                        "id": "veterinary-care-breadcrumb-home",
+                        "label": "Home",
+                        "url": "/"
+                      },
+                      {
+                        "id": "veterinary-care-breadcrumb-services",
+                        "label": "Services",
+                        "url": "/services"
+                      },
+                      {
+                        "id": "veterinary-care-breadcrumb-current",
+                        "label": "Veterinary Care"
+                      }
+                    ]
+                  },
+                  "closingSubtitle": "ONGOING HEALTH & WELLNESS",
+                  "closingTitle": "Support for Every Stage",
+                  "closingDescription": "From routine checkups to clear guidance at home, our team helps you make confident choices for your companion?s health."
+                },
+                {
+                  "id": "dog-training",
+                  "title": "Dog Training",
+                  "image": "/service/grooming.jpg",
+                  "imageAlt": "A person providing calm, hands-on care to a golden retriever",
+                  "subtitle": "POSITIVE DOG TRAINING",
+                  "heading": "Build Good Habits and a Stronger Bond",
+                  "description": "Our positive, reward-based training helps dogs learn useful skills while building trust with their people. We adapt every session to your dog?s age, personality and goals, creating steady progress in a supportive setting.",
+                  "highlights": [
+                    {
+                      "id": "training-highlight-positive",
+                      "title": "Positive reinforcement",
+                      "icon": "FaHeart"
+                    },
+                    {
+                      "id": "training-highlight-skills",
+                      "title": "Everyday essential skills",
+                      "icon": "FaDog"
+                    },
+                    {
+                      "id": "training-highlight-personal",
+                      "title": "Personalized sessions",
+                      "icon": "FaUsers"
+                    },
+                    {
+                      "id": "training-highlight-bond",
+                      "title": "Stronger pet-parent bond",
+                      "icon": "FaPaw"
+                    }
+                  ],
+                  "offerSubtitle": "LEARNING AT YOUR DOG?S PACE",
+                  "offerTitle": "Skills for Everyday Life",
+                  "offerDescription": "Practical training gives you and your dog the confidence to enjoy more of life together.",
+                  "offers": [
+                    {
+                      "id": "training-offer-basics",
+                      "text": "Basic cues and manners"
+                    },
+                    {
+                      "id": "training-offer-leash",
+                      "text": "Leash walking skills"
+                    },
+                    {
+                      "id": "training-offer-recall",
+                      "text": "Reliable recall practice"
+                    },
+                    {
+                      "id": "training-offer-social",
+                      "text": "Confidence and social skills"
+                    },
+                    {
+                      "id": "training-offer-home",
+                      "text": "Calm routines at home"
+                    },
+                    {
+                      "id": "training-offer-parent",
+                      "text": "Guidance for dog parents"
+                    }
+                  ],
+                  "breadcrumb": {
+                    "title": "Dog Training",
+                    "paths": [
+                      {
+                        "id": "dog-training-breadcrumb-home",
+                        "label": "Home",
+                        "url": "/"
+                      },
+                      {
+                        "id": "dog-training-breadcrumb-services",
+                        "label": "Services",
+                        "url": "/services"
+                      },
+                      {
+                        "id": "dog-training-breadcrumb-current",
+                        "label": "Dog Training"
+                      }
+                    ]
+                  },
+                  "closingSubtitle": "BETTER HABITS, STRONGER BONDS",
+                  "closingTitle": "Confidence Through Training",
+                  "closingDescription": "Positive, consistent training helps your dog build good habits and enjoy a closer, happier relationship with you."
+                },
+                {
+                  "id": "pet-sitting",
+                  "title": "Pet Sitting",
+                  "image": "/service/dog-bathtub.jpg",
+                  "imageAlt": "A caregiver bathing a dog in an outdoor tub",
+                  "subtitle": "LOVING PET SITTING",
+                  "heading": "Familiar, Reassuring Care While You?re Away",
+                  "description": "Your pet can stay comfortable in familiar surroundings while a trusted sitter keeps up with their everyday routine. We provide attentive visits, companionship and updates, always following the care instructions you share.",
+                  "highlights": [
+                    {
+                      "id": "sitting-highlight-home",
+                      "title": "Comfort of home",
+                      "icon": "FaHome"
+                    },
+                    {
+                      "id": "sitting-highlight-routine",
+                      "title": "Familiar daily routines",
+                      "icon": "FaCalendarAlt"
+                    },
+                    {
+                      "id": "sitting-highlight-attention",
+                      "title": "One-on-one attention",
+                      "icon": "FaHeart"
+                    },
+                    {
+                      "id": "sitting-highlight-updates",
+                      "title": "Peace-of-mind updates",
+                      "icon": "FaComments"
+                    }
+                  ],
+                  "offerSubtitle": "CARE THAT FEELS LIKE HOME",
+                  "offerTitle": "Thoughtful Care, On Your Schedule",
+                  "offerDescription": "We follow your pet?s routine and care preferences to help them feel safe, settled and loved.",
+                  "offers": [
+                    {
+                      "id": "sitting-offer-visits",
+                      "text": "Scheduled home visits"
+                    },
+                    {
+                      "id": "sitting-offer-feeding",
+                      "text": "Meals and fresh water"
+                    },
+                    {
+                      "id": "sitting-offer-walks",
+                      "text": "Walks and playtime"
+                    },
+                    {
+                      "id": "sitting-offer-routine",
+                      "text": "Medication and routine reminders"
+                    },
+                    {
+                      "id": "sitting-offer-company",
+                      "text": "Companionship and comfort"
+                    },
+                    {
+                      "id": "sitting-offer-updates",
+                      "text": "Updates for pet parents"
+                    }
+                  ],
+                  "breadcrumb": {
+                    "title": "Pet Sitting",
+                    "paths": [
+                      {
+                        "id": "pet-sitting-breadcrumb-home",
+                        "label": "Home",
+                        "url": "/"
+                      },
+                      {
+                        "id": "pet-sitting-breadcrumb-services",
+                        "label": "Services",
+                        "url": "/services"
+                      },
+                      {
+                        "id": "pet-sitting-breadcrumb-current",
+                        "label": "Pet Sitting"
+                      }
+                    ]
+                  },
+                  "closingSubtitle": "COMFORT WHILE YOU ARE AWAY",
+                  "closingTitle": "Care That Feels Like Home",
+                  "closingDescription": "A familiar routine, kind attention and regular updates help your pet stay relaxed and cared for at home."
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "PetTestimonials2": {
+              "subtitle": "Testimonials",
+              "title1": "Loved by pets.",
+              "highlightedTitle": "Trusted by their people.",
+              "description": "Real experiences from pet parents who trust PETLIO with the ones they love. Our care is designed to keep pets healthy, happy and comfortable at every stage of life.",
+              "buttonText": "Write a Review",
+              "buttonUrl": "/contact",
+              "slideLabel": "Show testimonial",
+              "image": "/other/1.webp",
+              "testimonials": [
+                {
+                  "id": "testimonial-priya-sharma",
+                  "name": "Priya Sharma",
+                  "location": "Pet Parent",
+                  "quote": "\"PETLIO has been amazing for my dog. The doctors are so caring and patient. My pet feels completely comfortable here, and I always leave with peace of mind.\"",
+                  "avatar": "/about/author-1.jpg"
+                },
+                {
+                  "id": "testimonial-amit-verma",
+                  "name": "Amit Verma",
+                  "location": "Pet Parent",
+                  "quote": "\"The team at PETLIO truly cares. From health checkups to grooming, everything is handled so well. My cat used to be anxious, but now she actually enjoys visiting!\"",
+                  "avatar": "/about/author-2.jpg"
+                },
+                {
+                  "id": "testimonial-neha-kapoor",
+                  "name": "Neha Kapoor",
+                  "location": "Pet Parent",
+                  "quote": "\"Such a clean and friendly environment. The staff is knowledgeable and genuinely loves animals. I’m so glad I found PETLIO for my cat’s regular care.\"",
+                  "avatar": "/about/author-3.jpg"
+                }
+              ],
+              "imageAlt": "A golden retriever and cat peeking over a pale blue backdrop"
+            }
+          }
+        },
+        "whyChooseUs": {
+          "variants": {
+            "PetAboutWhyChooseUs2": {
+              "subtitle": "WHY CHOOSE US",
+              "title": "Our Commitment",
+              "highlightedTitle": "to Excellence",
+              "features": [
+                {
+                  "id": "why-quality-brands",
+                  "number": "01",
+                  "icon": "FaAward",
+                  "title": "Quality Brands",
+                  "description": "Top-Tier Selection"
+                },
+                {
+                  "id": "why-reliability",
+                  "number": "02",
+                  "icon": "FaShieldAlt",
+                  "title": "Reliability",
+                  "description": "Fast and Efficient Service"
+                },
+                {
+                  "id": "why-network",
+                  "number": "03",
+                  "icon": "FaProjectDiagram",
+                  "title": "Network",
+                  "description": "Extensive Reach"
+                },
+                {
+                  "id": "why-delivery",
+                  "number": "04",
+                  "icon": "FaTruck",
+                  "title": "Delivery",
+                  "description": "Swift and Timely"
+                }
+              ]
+            }
+          }
+        },
+        "BookAppointment": {
+          "variants": {
+            "PetBookAppointment2": {
+              "intro": {
+                "eyebrow": "We Love Your Pets",
+                "title": "Book an Appointment",
+                "description": "Schedule a grooming session or pet care service at your convenience. Fill out the form below and we'll confirm your appointment shortly."
+              },
+              "form": {
+                "fields": [
+                  {
+                    "id": "appointment-owner-name",
+                    "name": "ownerName",
+                    "type": "text",
+                    "label": "Pet Owner Name *",
+                    "placeholder": "Enter your name",
+                    "icon": "FaUser",
+                    "required": true,
+                    "width": "half"
+                  },
+                  {
+                    "id": "appointment-phone",
+                    "name": "phone",
+                    "type": "tel",
+                    "label": "Phone Number *",
+                    "placeholder": "+1 000000000",
+                    "icon": "FaPhoneAlt",
+                    "required": true,
+                    "width": "half"
+                  },
+                  {
+                    "id": "appointment-email",
+                    "name": "email",
+                    "type": "email",
+                    "label": "Email Address *",
+                    "placeholder": "info@xyz.com",
+                    "icon": "FaEnvelope",
+                    "required": true,
+                    "width": "half"
+                  },
+                  {
+                    "id": "appointment-date",
+                    "name": "preferredDate",
+                    "type": "date",
+                    "label": "Preferred Date *",
+                    "placeholder": "Select date",
+                    "icon": "FaCalendarAlt",
+                    "required": true,
+                    "width": "half"
+                  },
+                  {
+                    "id": "appointment-time",
+                    "name": "preferredTime",
+                    "type": "select",
+                    "label": "Preferred Time *",
+                    "placeholder": "Select time",
+                    "icon": "FaClock",
+                    "required": true,
+                    "width": "half",
+                    "options": [
+                      {
+                        "id": "appointment-time-morning",
+                        "title": "9:00 AM - 11:00 AM",
+                        "value": "9am-11am"
+                      },
+                      {
+                        "id": "appointment-time-late-morning",
+                        "title": "11:00 AM - 1:00 PM",
+                        "value": "11am-1pm"
+                      },
+                      {
+                        "id": "appointment-time-afternoon",
+                        "title": "2:00 PM - 4:00 PM",
+                        "value": "2pm-4pm"
+                      },
+                      {
+                        "id": "appointment-time-evening",
+                        "title": "4:00 PM - 6:00 PM",
+                        "value": "4pm-6pm"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "appointment-service",
+                    "name": "service",
+                    "type": "select",
+                    "label": "Service Required *",
+                    "placeholder": "Select service",
+                    "icon": "FaPaw",
+                    "required": true,
+                    "width": "half",
+                    "options": [
+                      {
+                        "id": "appointment-service-grooming",
+                        "title": "Pet Grooming",
+                        "value": "pet-grooming"
+                      },
+                      {
+                        "id": "appointment-service-veterinary",
+                        "title": "Veterinary Care",
+                        "value": "veterinary-care"
+                      },
+                      {
+                        "id": "appointment-service-training",
+                        "title": "Dog Training",
+                        "value": "dog-training"
+                      },
+                      {
+                        "id": "appointment-service-sitting",
+                        "title": "Pet Sitting",
+                        "value": "pet-sitting"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "appointment-pet-type",
+                    "name": "petType",
+                    "type": "select",
+                    "label": "Pet Type (Dog / Cat) *",
+                    "placeholder": "Select pet type",
+                    "icon": "FaPaw",
+                    "required": true,
+                    "width": "half",
+                    "options": [
+                      {
+                        "id": "appointment-pet-dog",
+                        "title": "Dog",
+                        "value": "dog"
+                      },
+                      {
+                        "id": "appointment-pet-cat",
+                        "title": "Cat",
+                        "value": "cat"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "appointment-breed",
+                    "name": "breed",
+                    "type": "text",
+                    "label": "Pet Breed (Optional)",
+                    "placeholder": "Enter pet breed",
+                    "icon": "FaDog",
+                    "required": false,
+                    "width": "half"
+                  },
+                  {
+                    "id": "appointment-message",
+                    "name": "message",
+                    "type": "textarea",
+                    "label": "Additional Message (Optional)",
+                    "placeholder": "Any special requirements?",
+                    "icon": "FaCommentDots",
+                    "required": false,
+                    "width": "full"
+                  }
+                ],
+                "buttonText": "Book Appointment",
+                "successMessage": "Thank you. Your appointment request has been received."
+              }
+            }
+          }
+        },
+        "contact": {
+          "variants": {
+            "PetContact2": {
+              "intro": {
+                "eyebrow": "SEND US A MESSAGE",
+                "description": "Fill out the form below and our team will get back to you as soon as possible."
+              },
+              "form": {
+                "title": "We'd Love to Hear From You",
+                "namePlaceholder": "Name *",
+                "emailPlaceholder": "Email *",
+                "subjectPlaceholder": "Subject *",
+                "messagePlaceholder": "Message",
+                "buttonText": "Send Message",
+                "successMessage": "Thank you. Your message has been submitted successfully.",
+                "phonePlaceholder": "Phone"
+              },
+              "visual": {
+                "image": "/about/missionvison.webp",
+                "imageAlt": "A happy golden retriever and cat together"
+              },
+              "contactItems": [
+                {
+                  "id": "contact-info-phone",
+                  "icon": "FaPhoneAlt",
+                  "title": "Phone",
+                  "lines": [
+                    {
+                      "id": "contact-phone-number",
+                      "text": "+1 000000000"
+                    }
+                  ],
+                  "url": "tel:+1000000000"
+                },
+                {
+                  "id": "contact-info-email",
+                  "icon": "FaEnvelope",
+                  "title": "Email",
+                  "lines": [
+                    {
+                      "id": "contact-email-address",
+                      "text": "info@xyz.com"
+                    }
+                  ],
+                  "url": "mailto:info@xyz.com"
+                },
+                {
+                  "id": "contact-info-address",
+                  "icon": "FaMapMarkerAlt",
+                  "title": "Address",
+                  "lines": [
+                    {
+                      "id": "contact-office-address",
+                      "text": "123 Main St, New York, NY, USA"
+                    }
+                  ],
+                  "url": "https://www.google.com/maps/search/?api=1&query=123+main+st%2c+new+york%2c+ny%2c+usa"
+                }
+              ],
+              "location": {
+                "mapUrl": "https://www.google.com/maps?q=123+Main+St,+New+York,+NY,+USA&output=embed",
+                "mapTitle": "Map showing 123 Main St, New York, NY, USA"
+              }
+            }
+          }
+        },
+        "MissionVision": {
+          "variants": {
+            "PetMissionVision2": {
+              "eyebrow": "MISSION & VISION",
+              "title": "Our",
+              "highlightedTitle": "Mission & Vision",
+              "description": "We are committed to providing the best care, comfort and happiness for every pet, while building a healthier and kinder world for animals.",
+              "missionTitle": "Our",
+              "missionHighlightedTitle": "Mission",
+              "missionDescription": "Our mission is to provide high-quality, compassionate and personalized pet care services that improve the health, happiness and well-being of every pet. We strive to create a safe, comfortable and loving environment where pets receive the best grooming, nutrition and care.",
+              "visionTitle": "Our",
+              "visionHighlightedTitle": "Vision",
+              "visionDescription": "Our vision is to be the most trusted and preferred pet care brand, known for exceptional service, innovation and a deeper commitment to animal well-being. We aim to build a happier, healthier and more pet-friendly community for generations to come.",
+              "image": "/about/missionvison.webp",
+              "imageAlt": "A happy golden retriever and cat surrounded by soft paw-print details"
+            }
+          }
+        },
+        "OurTeam": {
+          "variants": {
+            "PetOurTeam2": {
+              "subtitle": "OUR TEAM",
+              "title": "Meet Our Pet Care Experts",
+              "description": "Our dedicated and experienced team is passionate about animals and committed to providing the best care for your furry friends.",
+              "members": [
+                {
+                  "id": "team-emily-carter",
+                  "name": "Dr. Emily Carter",
+                  "role": "Veterinarian",
+                  "description": "Specializes in preventive care, diagnostics and overall pet health.",
+                  "image": "/team/team-1.png",
+                  "imageAlt": "Dr. Emily Carter caring for a golden retriever",
+                  "socialLinks": [
+                    {
+                      "id": "emily-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "emily-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "emily-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-james-miller",
+                  "name": "Dr. James Miller",
+                  "role": "Veterinarian",
+                  "description": "Expert in internal medicine, vaccinations and emergency care.",
+                  "image": "/team/team-2.png",
+                  "imageAlt": "Dr. James Miller with a golden retriever",
+                  "socialLinks": [
+                    {
+                      "id": "james-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "james-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "james-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-sophia-lee",
+                  "name": "Sophia Lee",
+                  "role": "Pet Groomer",
+                  "description": "Professional groomer with expertise in pet styling and coat care.",
+                  "image": "/team/team-3.png",
+                  "imageAlt": "Sophia Lee grooming a small dog",
+                  "socialLinks": [
+                    {
+                      "id": "sophia-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "sophia-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "sophia-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-michael-brown",
+                  "name": "Michael Brown",
+                  "role": "Dog Trainer",
+                  "description": "Certified dog trainer helping pets build good behaviour and essential skills.",
+                  "image": "/team/team-4.png",
+                  "imageAlt": "Michael Brown training a golden retriever",
+                  "socialLinks": [
+                    {
+                      "id": "michael-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "michael-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "michael-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-olivia-wilson",
+                  "name": "Olivia Wilson",
+                  "role": "Pet Sitter",
+                  "description": "Loving and reliable pet sitter ensuring your pets are safe and happy.",
+                  "image": "/team/team-5.png",
+                  "imageAlt": "Olivia Wilson caring for a cat",
+                  "socialLinks": [
+                    {
+                      "id": "olivia-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "olivia-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "olivia-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-ava-martinez",
+                  "name": "Dr. Ava Martinez",
+                  "role": "Veterinarian",
+                  "description": "Expertise in feline care, nutrition and preventive health.",
+                  "image": "/team/team-6.png",
+                  "imageAlt": "Dr. Ava Martinez examining a cat",
+                  "socialLinks": [
+                    {
+                      "id": "ava-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "ava-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "ava-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-isabella-clark",
+                  "name": "Isabella Clark",
+                  "role": "Pet Groomer",
+                  "description": "Specializes in breed-specific grooming, spa treatments and nail care.",
+                  "image": "/team/team-7.png",
+                  "imageAlt": "Isabella Clark grooming a fluffy white dog",
+                  "socialLinks": [
+                    {
+                      "id": "isabella-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "isabella-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "isabella-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-david-thompson",
+                  "name": "David Thompson",
+                  "role": "Dog Trainer",
+                  "description": "Focuses on obedience training, behaviour correction and socialization.",
+                  "image": "/team/team-8.png",
+                  "imageAlt": "David Thompson training a dog",
+                  "socialLinks": [
+                    {
+                      "id": "david-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "david-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "david-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                },
+                {
+                  "id": "team-emma-davis",
+                  "name": "Emma Davis",
+                  "role": "Pet Sitter",
+                  "description": "Provides personalized care, feeding, playtime and companionship.",
+                  "image": "/team/left.jpg",
+                  "imageAlt": "Emma Davis caring for a golden retriever",
+                  "socialLinks": [
+                    {
+                      "id": "emma-facebook",
+                      "platform": "facebook",
+                      "url": "https://facebook.com"
+                    },
+                    {
+                      "id": "emma-instagram",
+                      "platform": "instagram",
+                      "url": "https://instagram.com"
+                    },
+                    {
+                      "id": "emma-linkedin",
+                      "platform": "linkedin",
+                      "url": "https://linkedin.com"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Pricing": {
+          "variants": {
+            "PetPricing2": {
+              "dogTable": {
+                "id": "dog-grooming-prices",
+                "eyebrow": "GROOMING PRICE LIST",
+                "title": "Dog Grooming Services",
+                "columns": [
+                  {
+                    "id": "service",
+                    "label": "Service"
+                  },
+                  {
+                    "id": "small",
+                    "label": "Small Dogs (upto 10 kg)"
+                  },
+                  {
+                    "id": "medium",
+                    "label": "Medium Dogs (10 - 25 kg)"
+                  },
+                  {
+                    "id": "large",
+                    "label": "Large Dogs (25 - 45 kg)"
+                  },
+                  {
+                    "id": "extra-large",
+                    "label": "Extra Large Dogs (Above 45 kg)"
+                  }
+                ],
+                "rows": [
+                  {
+                    "id": "dog-bath-cleaning",
+                    "service": "Bath & Coat Cleaning",
+                    "prices": [
+                      "₹700",
+                      "₹900",
+                      "₹1,200",
+                      "₹1,500"
+                    ]
+                  },
+                  {
+                    "id": "dog-hair-trimming",
+                    "service": "Hair Trimming & Styling",
+                    "prices": [
+                      "₹900",
+                      "₹1,200",
+                      "₹1,600",
+                      "₹2,000"
+                    ]
+                  },
+                  {
+                    "id": "dog-nail-trimming",
+                    "service": "Nail Trimming",
+                    "prices": [
+                      "₹200",
+                      "₹250",
+                      "₹300",
+                      "₹400"
+                    ]
+                  },
+                  {
+                    "id": "dog-ear-cleaning",
+                    "service": "Ear Cleaning",
+                    "prices": [
+                      "₹250",
+                      "₹300",
+                      "₹400",
+                      "₹500"
+                    ]
+                  },
+                  {
+                    "id": "dog-deshedding",
+                    "service": "De-shedding Treatment",
+                    "prices": [
+                      "₹800",
+                      "₹1,000",
+                      "₹1,400",
+                      "₹1,800"
+                    ]
+                  },
+                  {
+                    "id": "dog-full-package",
+                    "service": "Full Grooming Package",
+                    "note": "(Bath + Trim + Nail + Ear)",
+                    "prices": [
+                      "₹1,500",
+                      "₹1,900",
+                      "₹2,500",
+                      "₹3,200"
+                    ]
+                  }
+                ]
+              },
+              "catTable": {
+                "id": "cat-grooming-prices",
+                "title": "Cat Grooming Services",
+                "columns": [
+                  {
+                    "id": "service",
+                    "label": "Service"
+                  },
+                  {
+                    "id": "short-hair",
+                    "label": "Short Hair Cats"
+                  },
+                  {
+                    "id": "long-hair",
+                    "label": "Long Hair Cats"
+                  }
+                ],
+                "rows": [
+                  {
+                    "id": "cat-bath-cleaning",
+                    "service": "Bath & Coat Cleaning",
+                    "prices": [
+                      "₹800",
+                      "₹1,000"
+                    ]
+                  },
+                  {
+                    "id": "cat-hair-trimming",
+                    "service": "Hair Trimming & Styling",
+                    "prices": [
+                      "₹900",
+                      "₹1,200"
+                    ]
+                  },
+                  {
+                    "id": "cat-nail-trimming",
+                    "service": "Nail Trimming",
+                    "prices": [
+                      "₹250",
+                      "₹300"
+                    ]
+                  },
+                  {
+                    "id": "cat-ear-cleaning",
+                    "service": "Ear Cleaning",
+                    "prices": [
+                      "₹250",
+                      "₹300"
+                    ]
+                  },
+                  {
+                    "id": "cat-deshedding",
+                    "service": "De-shedding Treatment",
+                    "prices": [
+                      "₹800",
+                      "₹1,000"
+                    ]
+                  },
+                  {
+                    "id": "cat-full-package",
+                    "service": "Full Grooming Package",
+                    "note": "(Bath + Trim + Nail + Ear)",
+                    "prices": [
+                      "₹1,600",
+                      "₹2,200"
+                    ]
+                  }
+                ]
+              },
+              "addonsEyebrow": "ADD-ON SERVICES",
+              "addonsTitle": "Extra Care for Your Pet",
+              "addons": [
+                {
+                  "id": "addon-teeth-cleaning",
+                  "title": "Teeth Cleaning",
+                  "price": "₹300",
+                  "icon": "FaPaw"
+                },
+                {
+                  "id": "addon-flea-tick",
+                  "title": "Flea & Tick Treatment",
+                  "price": "₹400",
+                  "icon": "FaStar"
+                },
+                {
+                  "id": "addon-paw-pad",
+                  "title": "Paw Pad Care",
+                  "price": "₹250",
+                  "icon": "FaPaw"
+                },
+                {
+                  "id": "addon-medicated-bath",
+                  "title": "Medicated Bath",
+                  "price": "₹400",
+                  "icon": "FaLeaf"
+                },
+                {
+                  "id": "addon-deodorizing",
+                  "title": "Deodorizing Treatment",
+                  "price": "₹300",
+                  "icon": "FaBath"
+                },
+                {
+                  "id": "addon-bow-bandana",
+                  "title": "Bow / Bandana",
+                  "price": "₹150",
+                  "icon": "FaRibbon"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "shared": {
+          "Topbar": "PetTopBar2",
+          "Header": "PetHeader2",
+          "Footer": "PetFooter2"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "HeroSection",
+                "component": "PetHero2"
+              },
+              {
+                "key": "AboutUs",
+                "component": "AboutUs"
+              },
+              {
+                "key": "OurService",
+                "component": "PetOurService2"
+              },
+              {
+                "key": "Care",
+                "component": "PetCare2"
+              },
+              {
+                "key": "Testimonial",
+                "component": "PetTestimonials2"
+              }
+            ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "AboutUs",
+                "component": "AboutUs"
+              },
+              {
+                "key": "MissionVision",
+                "component": "PetMissionVision2"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "WhyChooseUs"
+              },
+              {
+                "key": "Testimonial",
+                "component": "Testimonial"
+              }
+            ]
+          },
+          "gallery": {
+            "components": [
+              {
+                "key": "Gallery",
+                "component": "PetGallery2"
+              }
+            ]
+          },
+          "faqs": {
+            "components": [
+              {
+                "key": "Faq",
+                "component": "Faq"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "OurService",
+                "component": "PetOurService2"
+              }
+            ]
+          },
+          "serviceDetails": {
+            "components": [
+              {
+                "key": "ServiceDetail",
+                "component": "ServiceDetail"
+              }
+            ]
+          },
+          "contact": {
+            "components": [
+              {
+                "key": "Contact",
+                "component": "Contact"
+              }
+            ]
+          },
+          "bookAnAppointment": {
+            "components": [
+              {
+                "key": "BookAppointment",
+                "component": "BookAppointment"
+              }
+            ]
+          },
+          "notFound": {
+            "components": [
+              {
+                "key": "NotFoundSection",
+                "component": "NotFoundSection"
+              }
+            ]
+          },
+          "team": {
+            "components": [
+              {
+                "key": "OurTeam",
+                "component": "PetOurTeam2"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "WhyChooseUs"
+              }
+            ]
+          },
+          "pricing": {
+            "components": [
+              {
+                "key": "Pricing",
+                "component": "PetPricing2"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
