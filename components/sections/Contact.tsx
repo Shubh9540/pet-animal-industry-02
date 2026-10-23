@@ -16,63 +16,72 @@ const renderIcon = (iconName: string) => {
 
 export const Contact = ({ data }: ContactProps) => {
   const [submitted, setSubmitted] = useState(false);
+
   if (!data) return null;
 
   return (
-    <>
-      <section className="w-full bg-white px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 overflow-hidden rounded-2xl bg-[#f0f7ff] md:grid-cols-3">
-          {data.contactItems.map((item) => (
-            <a key={item.id} href={item.url} className="flex flex-col items-center justify-center px-5 py-6 text-center md:border-r md:border-[#dceaff] md:last:border-r-0 sm:py-7">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#d9ecff] text-2xl text-[#4b9cff] sm:h-16 sm:w-16 sm:text-3xl">{renderIcon(item.icon)}</span>
-              <h2 className="mt-1 font-heading text-xl font-semibold leading-tight text-[var(--color-heading)] sm:text-2xl">{item.title}</h2>
-              <div className="mt-1 text-sm leading-6 text-[var(--color-heading)] sm:text-base">
-                {item.lines.map((line) => <p key={line.id}>{line.text}</p>)}
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="w-full bg-white px-5 pb-8 sm:px-8 lg:px-10 lg:pb-10">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-stretch gap-4 lg:grid-cols-[1.55fr_0.9fr] lg:gap-5">
-          <div className="rounded-2xl bg-white p-5 shadow-[0_8px_30px_rgba(5,55,40,0.08)] sm:p-7 lg:p-9">
-            <div className="flex items-center gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-primary)] sm:text-sm">{data.intro.eyebrow}</p>
-              <span className="h-px w-8 bg-[#4b9cff]" />
-            </div>
-            <h1 className="mt-2 font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] text-[var(--color-heading)] sm:text-4xl lg:text-5xl">
-              {data.form.title}
-            </h1>
-            <p className="mt-2 text-sm leading-6 text-[var(--color-text-light)] sm:text-base">{data.intro.description}</p>
-
-            <form className="mt-5 grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4" onChange={() => setSubmitted(false)} onSubmit={(event) => { event.preventDefault(); setSubmitted(true); event.currentTarget.reset(); }}>
-              <input name="name" required placeholder={data.form.namePlaceholder} aria-label={data.form.namePlaceholder} className="w-full rounded-xl border border-[#e0edff] bg-white px-4 py-3.5 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[#8799b3] focus:border-[var(--color-primary)] sm:text-base" />
-              <input name="phone" type="tel" placeholder={data.form.phonePlaceholder} aria-label={data.form.phonePlaceholder} className="w-full rounded-xl border border-[#e0edff] bg-white px-4 py-3.5 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[#8799b3] focus:border-[var(--color-primary)] sm:text-base" />
-              <input name="email" type="email" required placeholder={data.form.emailPlaceholder} aria-label={data.form.emailPlaceholder} className="w-full rounded-xl border border-[#e0edff] bg-white px-4 py-3.5 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[#8799b3] focus:border-[var(--color-primary)] sm:text-base" />
-              <input name="subject" required placeholder={data.form.subjectPlaceholder} aria-label={data.form.subjectPlaceholder} className="w-full rounded-xl border border-[#e0edff] bg-white px-4 py-3.5 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[#8799b3] focus:border-[var(--color-primary)] sm:text-base" />
-              <textarea name="message" required rows={4} placeholder={data.form.messagePlaceholder} aria-label={data.form.messagePlaceholder} className="w-full resize-y rounded-xl border border-[#e0edff] bg-white px-4 py-3.5 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[#8799b3] focus:border-[var(--color-primary)] sm:col-span-2 sm:text-base" />
-              <div className="flex flex-col items-start gap-3 sm:col-span-2">
-                <button type="submit" className="inline-flex items-center gap-4 rounded-full bg-[#4b9cff] py-1.5 pl-6 pr-1.5 text-sm font-semibold uppercase text-white transition-colors hover:bg-[#3d88e8] sm:text-base">
-                  <span>{data.form.buttonText}</span>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg text-[var(--color-primary)]"><FaArrowRight aria-hidden="true" /></span>
-                </button>
-                {submitted && <p role="status" className="text-sm text-[var(--color-primary)]">{data.form.successMessage}</p>}
-              </div>
-            </form>
+    <section className="w-full overflow-hidden bg-[var(--color-white)] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+      <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-start gap-7 lg:grid-cols-[0.9fr_0.7fr_1.1fr] lg:gap-0">
+        <div className="lg:pr-8">
+          <div className="flex items-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-contact-badge)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-accent-light)] sm:text-sm">
+              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[var(--color-accent-light)]" />
+              {data.intro.eyebrow}
+            </span>
           </div>
 
-          <div className="relative min-h-[380px] overflow-hidden rounded-2xl sm:min-h-[480px] lg:min-h-[560px]">
-            <Image src={data.visual.image} alt={data.visual.imageAlt} fill sizes="(min-width: 1024px) 36vw, 100vw" className="object-cover" />
+          <h2 className="mt-4 flex flex-col gap-2 font-heading text-3xl font-bold leading-[1.12] tracking-[-0.04em] text-[var(--color-heading)] sm:gap-3 sm:text-4xl lg:text-5xl">
+            <span className="block">{data.intro.title}</span>
+            <span className="block leading-[1.15] text-[var(--color-accent-light)]">{data.intro.highlightedTitle}</span>
+          </h2>
+
+          <p className="mt-4 max-w-lg text-sm leading-6 text-[var(--color-text-light)] sm:text-base sm:leading-7">
+            {data.intro.description}
+          </p>
+
+          <div className="mt-7 flex flex-col gap-6 sm:mt-8">
+            {data.contactItems.map((item) => (
+              <a key={item.id} href={item.url} className="group flex items-start gap-4">
+                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[var(--color-contact-icon-bg)] text-xl text-[var(--color-accent-light)] transition-colors group-hover:bg-[var(--color-contact-icon-hover)] sm:h-14 sm:w-14 sm:text-2xl">
+                  {renderIcon(item.icon)}
+                </span>
+                <span>
+                  <span className="block font-heading text-base font-bold text-[var(--color-heading)] sm:text-lg">{item.title}</span>
+                  <span className="mt-1 block text-sm leading-6 text-[var(--color-text-light)] sm:text-base">
+                    {item.lines.map((line) => <span key={line.id} className="block">{line.text}</span>)}
+                  </span>
+                </span>
+              </a>
+            ))}
           </div>
         </div>
-      </section>
 
-      <section className="w-full bg-white px-5 pb-10 sm:px-8 lg:px-10 lg:pb-14">
-        <div className="mx-auto w-full max-w-[1440px] overflow-hidden rounded-2xl">
-          <iframe src={data.location.mapUrl} title={data.location.mapTitle} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-72 w-full border-0 sm:h-80 lg:h-[420px]" />
+        <div className="relative z-10 rounded-2xl border border-[var(--color-contact-card-border)] bg-[var(--color-white)] p-5 shadow-[var(--shadow-contact-card)] sm:p-6 lg:-mr-14 lg:mt-36">
+          <h3 className="font-heading text-2xl font-bold text-[var(--color-heading)]">{data.form.title}</h3>
+          <p className="mt-1 text-sm leading-6 text-[var(--color-text-light)]">{data.form.description}</p>
+
+          <form className="mt-4 flex flex-col gap-3" onChange={() => setSubmitted(false)} onSubmit={(event) => { event.preventDefault(); setSubmitted(true); event.currentTarget.reset(); }}>
+            <input name="name" required placeholder={data.form.namePlaceholder} aria-label={data.form.namePlaceholder} className="w-full rounded-xl border border-[var(--color-border-form)] bg-[var(--color-contact-field-bg)] px-4 py-3 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-accent-light)]" />
+            <input name="email" type="email" required placeholder={data.form.emailPlaceholder} aria-label={data.form.emailPlaceholder} className="w-full rounded-xl border border-[var(--color-border-form)] bg-[var(--color-contact-field-bg)] px-4 py-3 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-accent-light)]" />
+            <input name="phone" type="tel" placeholder={data.form.phonePlaceholder} aria-label={data.form.phonePlaceholder} className="w-full rounded-xl border border-[var(--color-border-form)] bg-[var(--color-contact-field-bg)] px-4 py-3 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-accent-light)]" />
+            <select name="service" required defaultValue="" aria-label={data.form.servicePlaceholder} className="w-full rounded-xl border border-[var(--color-border-form)] bg-[var(--color-contact-field-bg)] px-4 py-3 text-sm text-[var(--color-placeholder)] outline-none transition-colors focus:border-[var(--color-accent-light)]">
+              <option value="" disabled>{data.form.servicePlaceholder}</option>
+              {data.form.serviceOptions.map((option) => <option key={option.id} value={option.value}>{option.label}</option>)}
+            </select>
+            <textarea name="message" required rows={4} placeholder={data.form.messagePlaceholder} aria-label={data.form.messagePlaceholder} className="w-full resize-y rounded-xl border border-[var(--color-border-form)] bg-[var(--color-contact-field-bg)] px-4 py-3 text-sm text-[var(--color-heading)] outline-none transition-colors placeholder:text-[var(--color-placeholder)] focus:border-[var(--color-accent-light)]" />
+
+            <button type="submit" className="mt-1 inline-flex w-full items-center justify-center gap-4 rounded-xl bg-[var(--color-accent-light)] px-5 py-3.5 text-sm font-semibold text-[var(--color-white)] transition-colors hover:bg-[var(--color-accent-hover)]">
+              <span>{data.form.buttonText}</span>
+              <FaArrowRight aria-hidden="true" />
+            </button>
+            {submitted && <p role="status" className="text-sm leading-6 text-[var(--color-primary)]">{data.form.successMessage}</p>}
+          </form>
         </div>
-      </section>
-    </>
+
+        <div className="relative min-h-[420px] overflow-hidden rounded-2xl sm:min-h-[560px] lg:min-h-[720px] lg:rounded-l-none">
+          <Image src={data.visual.image} alt={data.visual.imageAlt} fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover object-center" />
+        </div>
+      </div>
+    </section>
   );
 };

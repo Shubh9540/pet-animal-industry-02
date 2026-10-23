@@ -85,22 +85,15 @@ export interface GalleryItem {
     category: string;
 }
 
-export interface GalleryCategory {
-  id: string;
-  label: string;
-}
-
 export interface GalleryData {
   subtitle: string;
   title: string;
+  highlightedTitle: string;
   description: string;
   openLabel: string;
   closeLabel: string;
   previousLabel: string;
   nextLabel: string;
-  pageLabel: string;
-  categories: GalleryCategory[];
-  itemsPerPage: number;
   images: GalleryItem[];
 }
 
@@ -117,6 +110,7 @@ export interface GalleryImageProps {
 
 export interface FaqItem {
   id: string;
+  number: string;
   question: string;
   answer: string;
 }
@@ -168,25 +162,7 @@ export interface AboutUsData {
 
 export interface AboutUsProps {
   data?: AboutUsData;
-}
-
-export interface MissionVisionData {
-  eyebrow: string;
-  title: string;
-  highlightedTitle: string;
-  description: string;
-  missionTitle: string;
-  missionHighlightedTitle: string;
-  missionDescription: string;
-  visionTitle: string;
-  visionHighlightedTitle: string;
-  visionDescription: string;
-  image: string;
-  imageAlt: string;
-}
-
-export interface MissionVisionProps {
-  data?: MissionVisionData;
+  showButton?: boolean;
 }
 
 export interface PaginationItem {
@@ -220,6 +196,27 @@ export interface OurServiceProps {
   limit?: number;
 }
 
+export interface ServicesPageCard {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  url: string;
+}
+
+export interface ServicesPageData {
+  eyebrow: string;
+  title: string;
+  highlightedTitle: string;
+  description: string;
+  cards: ServicesPageCard[];
+}
+
+export interface ServicesPageContentProps {
+  data?: ServicesPageData;
+}
+
 export interface CareData {
   eyebrow: string;
   title: string;
@@ -238,12 +235,30 @@ export interface CareProps {
 export interface ServiceDetailHighlight {
   id: string;
   title: string;
+  description?: string;
   icon: string;
 }
 
 export interface ServiceDetailOffer {
   id: string;
   text: string;
+}
+
+export interface ServiceDetailStep {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
+export interface ServiceDetailAdvantage {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
 }
 
 export interface ServiceDetailItem {
@@ -254,6 +269,7 @@ export interface ServiceDetailItem {
   imageAlt: string;
   subtitle: string;
   heading: string;
+  highlightedHeading?: string;
   description: string;
   highlights: ServiceDetailHighlight[];
   offerSubtitle: string;
@@ -263,19 +279,23 @@ export interface ServiceDetailItem {
   closingSubtitle: string;
   closingTitle: string;
   closingDescription: string;
+  processBadge?: string;
+  processTitle?: string;
+  processHighlightedTitle?: string;
+  steps?: ServiceDetailStep[];
+  advantageBadge?: string;
+  advantageTitle?: string;
+  advantageHighlightedTitle?: string;
+  advantages?: ServiceDetailAdvantage[];
 }
 
 export interface ServiceDetailData {
+  canonicalServiceId: string;
   services: ServiceDetailItem[];
 }
 
 export interface ServiceDetailProps {
   data?: ServiceDetailData;
-  serviceId: string;
-}
-
-export interface ServiceDetailsPageProps {
-  params: Promise<{ id: string }>;
 }
 
 export interface TestimonialItem {
@@ -284,6 +304,8 @@ export interface TestimonialItem {
   location: string;
   quote: string;
   avatar: string;
+  avatarAlt: string;
+  rating: number;
 }
 
 export interface TestimonialsData {
@@ -303,74 +325,45 @@ export interface TestimonialProps {
   data?: TestimonialsData;
 }
 
-export interface TeamSocialLink {
-  id: string;
-  platform: string;
-  url: string;
-}
-
-export interface TeamMember {
+export interface OurTeamMember {
   id: string;
   name: string;
   role: string;
   description: string;
   image: string;
   imageAlt: string;
-  socialLinks: TeamSocialLink[];
 }
 
 export interface OurTeamData {
-  subtitle: string;
+  eyebrow: string;
   title: string;
+  highlightedTitle: string;
   description: string;
-  members: TeamMember[];
+  members: OurTeamMember[];
 }
 
 export interface OurTeamProps {
   data?: OurTeamData;
 }
 
-export interface PricingTableColumn {
+export interface FooterSocialLink {
+  id: string;
+  icon: string;
+  label: string;
+  url: string;
+}
+
+export interface FooterQuickLink {
   id: string;
   label: string;
+  url: string;
 }
 
-export interface PricingTableRow {
+export interface FooterContactItem {
   id: string;
-  service: string;
-  note?: string;
-  prices: string[];
-}
-
-export interface GroomingPricingTable {
-  id: string;
-  eyebrow?: string;
-  title: string;
-  columns: PricingTableColumn[];
-  rows: PricingTableRow[];
-}
-
-export interface PriceTableProps {
-  data: GroomingPricingTable;
-}
-
-export interface PricingAddon {
-  id: string;
-  title: string;
-  price: string;
   icon: string;
-}
-
-export interface PricingData {
-  dogTable: GroomingPricingTable;
-  catTable: GroomingPricingTable;
-  addonsEyebrow: string;
-  addonsTitle: string;
-  addons: PricingAddon[];
-}
-
-export interface PricingProps {
-  data?: PricingData;
+  value: string;
+  url?: string;
 }
 
 export interface FooterData {
@@ -383,9 +376,9 @@ export interface FooterData {
   quickLinksTitle: string;
   contactTitle: string;
   socialTitle: string;
-  socialLinks: { id: string; icon: string; label: string; url: string }[];
-  quickLinks: { id: string; label: string; url: string }[];
-  contactItems: { id: string; icon: string; value: string; url?: string }[];
+  socialLinks: FooterSocialLink[];
+  quickLinks: FooterQuickLink[];
+  contactItems: FooterContactItem[];
 }
 
 export interface FooterProps {
@@ -424,16 +417,20 @@ export interface TemplateComponentsData {
 
 export interface WhyChooseUsFeature {
   id: string;
-  number: string;
-  icon: string;
   title: string;
   description: string;
+  image?: string;
+  imageAlt?: string;
+  number?: string;
+  icon?: string;
 }
 
 export interface WhyChooseUsData {
-  subtitle: string;
+  badge?: string;
+  subtitle?: string;
   title: string;
   highlightedTitle: string;
+  description?: string;
   features: WhyChooseUsFeature[];
 }
 
@@ -454,17 +451,27 @@ export interface ContactInfoItem {
   url?: string;
 }
 
+export interface ContactServiceOption {
+  id: string;
+  label: string;
+  value: string;
+}
+
 export interface ContactData {
   intro: {
     eyebrow: string;
+    title: string;
+    highlightedTitle: string;
     description: string;
   };
   form: {
     title: string;
+    description: string;
     namePlaceholder: string;
     phonePlaceholder: string;
     emailPlaceholder: string;
-    subjectPlaceholder: string;
+    servicePlaceholder: string;
+    serviceOptions: ContactServiceOption[];
     messagePlaceholder: string;
     buttonText: string;
     successMessage: string;
@@ -474,10 +481,6 @@ export interface ContactData {
     imageAlt: string;
   };
   contactItems: ContactInfoItem[];
-  location: {
-    mapUrl: string;
-    mapTitle: string;
-  };
 }
 
 export interface ContactProps {
@@ -496,7 +499,6 @@ export interface BookAppointmentField {
   type: string;
   label: string;
   placeholder: string;
-  icon: string;
   required: boolean;
   width: string;
   options?: BookAppointmentFormOption[];
@@ -510,7 +512,7 @@ export interface BookAppointmentData {
   intro: {
     eyebrow: string;
     title: string;
-    description: string;
+    highlightedTitle: string;
   };
   form: {
     fields: BookAppointmentField[];
@@ -540,7 +542,6 @@ export interface PetTemplateData {
     contactBreadcrumb?: BreadcrumbData;
     galleryBreadcrumb?: BreadcrumbData;
     teamBreadcrumb?: BreadcrumbData;
-    pricingBreadcrumb?: BreadcrumbData;
     bookAppointmentBreadcrumb?: BreadcrumbData;
     notFound?: NotFoundData;
     Footer?: FooterData;
@@ -553,15 +554,14 @@ export interface PetTemplateData {
         Header?: { variants?: { PetHeader2?: HeaderData } };
         Hero?: { variants?: { PetHero2?: HeroData } };
         AboutUs?: { variants?: { PetAboutUs2?: AboutUsData } };
-        MissionVision?: { variants?: { PetMissionVision2?: MissionVisionData } };
         Gallery?: { variants?: { PetGallery2?: GalleryData } };
         Faq?: { variants?: { PetFaq2?: FaqData } };
         OurService?: { variants?: { PetOurService2?: OurServiceData } };
+        ServicesPage?: { variants?: { PetServicesPage2?: ServicesPageData } };
         Care?: { variants?: { PetCare2?: CareData } };
         ServiceDetail?: { variants?: { PetServiceDetail2?: ServiceDetailData } };
         Testimonials?: { variants?: { PetTestimonials2?: TestimonialsData } };
         OurTeam?: { variants?: { PetOurTeam2?: OurTeamData } };
-        Pricing?: { variants?: { PetPricing2?: PricingData } };
         whyChooseUs?: { variants?: { PetAboutWhyChooseUs2?: WhyChooseUsData } };
         contact?: { variants?: { PetContact2?: ContactData } };
         BookAppointment?: { variants?: { PetBookAppointment2?: BookAppointmentData } };

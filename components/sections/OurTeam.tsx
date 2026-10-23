@@ -1,102 +1,61 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { useReducedMotion } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaPaw } from 'react-icons/fa';
 import { OurTeamProps } from '@/types/templates.types';
 
-const getSocialIcon = (platform: string) => {
-  switch (platform) {
-    case 'facebook': return FaFacebookF;
-    case 'instagram': return FaInstagram;
-    case 'linkedin': return FaLinkedinIn;
-    default: return null;
-  }
-};
-
 export const OurTeam = ({ data }: OurTeamProps) => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const shouldReduceMotion = useReducedMotion();
-  const [visibleMembers, setVisibleMembers] = useState<Set<string>>(new Set());
-
-  useEffect(() => {
-    if (!data) return;
-    if (shouldReduceMotion) {
-      setVisibleMembers(new Set(data.members.map((member) => member.id)));
-      return;
-    }
-
-    const section = sectionRef.current;
-    if (!section) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      const enteringIds = entries
-        .filter((entry) => entry.isIntersecting)
-        .map((entry) => entry.target instanceof HTMLElement ? entry.target.dataset.teamMember : undefined)
-        .filter((id): id is string => Boolean(id));
-      const leavingIds = entries
-        .filter((entry) => !entry.isIntersecting)
-        .map((entry) => entry.target instanceof HTMLElement ? entry.target.dataset.teamMember : undefined)
-        .filter((id): id is string => Boolean(id));
-
-      if (enteringIds.length || leavingIds.length) {
-        setVisibleMembers((current) => {
-          const next = new Set(current);
-          enteringIds.forEach((id) => next.add(id));
-          leavingIds.forEach((id) => next.delete(id));
-          return next;
-        });
-      }
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-
-    section.querySelectorAll('[data-team-member]').forEach((member) => observer.observe(member));
-    return () => observer.disconnect();
-  }, [data, shouldReduceMotion]);
-
-  if (!data) return null;
+  if (!data?.members.length) return null;
 
   return (
-    <section ref={sectionRef} className="w-full bg-[var(--color-bg-alt)] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
-      <div className="mx-auto w-full max-w-[1440px]">
-        <header className="mx-auto mb-8 max-w-3xl text-center sm:mb-10 lg:mb-12">
-          <div className="mb-3 flex items-center justify-center gap-3 sm:gap-4">
-            <span className="h-px w-8 bg-[var(--color-primary)] sm:w-10" />
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--color-primary)] sm:text-sm">{data.subtitle}</p>
-            <span className="h-px w-8 bg-[var(--color-primary)] sm:w-10" />
+    <section className="relative w-full overflow-hidden bg-[var(--color-white)] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+      <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[var(--color-team-decoration)] blur-sm sm:h-80 sm:w-80 lg:-left-40 lg:h-[440px] lg:w-[440px]" />
+      <FaPaw aria-hidden="true" className="pointer-events-none absolute -right-12 top-24 hidden rotate-12 text-[210px] text-[var(--color-team-decoration)] lg:block" />
+
+      <div className="relative mx-auto w-full max-w-[1280px]">
+        <header className="mx-auto max-w-3xl text-center">
+          <div className="flex items-center justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-team-badge)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent-light)] sm:text-sm">
+              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[var(--color-accent-light)]" />
+              {data.eyebrow}
+            </span>
           </div>
-          <h2 className="font-heading text-3xl font-semibold leading-tight tracking-[-0.04em] text-[var(--color-heading)] sm:text-4xl lg:text-5xl">{data.title}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-[var(--color-text-light)] sm:text-base sm:leading-7">{data.description}</p>
+
+          <h2 className="mt-4 flex flex-col gap-2 font-heading text-3xl font-bold leading-[1.12] tracking-[-0.04em] text-[var(--color-heading)] sm:gap-3 sm:text-4xl lg:text-5xl">
+            <span className="block">{data.title}</span>
+            <span className="block leading-[1.15] text-[var(--color-accent-light)]">{data.highlightedTitle}</span>
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-[var(--color-text-light)] sm:text-base sm:leading-7">
+            {data.description}
+          </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
-          {data.members.map((member) => {
-            const isVisible = shouldReduceMotion || visibleMembers.has(member.id);
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4 lg:gap-4 xl:gap-5">
+          {data.members.map((member) => (
+            <article key={member.id} className="group overflow-hidden rounded-2xl border border-[var(--color-border-soft)] bg-[var(--color-white)] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div className="relative aspect-[4/3] overflow-hidden bg-[var(--color-team-image-bg)]">
+                <Image
+                  src={member.image}
+                  alt={member.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
 
-            return (
-              <article key={member.id} data-team-member={member.id} className={`overflow-hidden rounded-xl bg-[var(--color-primary)] shadow-sm transition-all duration-700 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                <div className="relative aspect-[1/0.82] overflow-hidden sm:aspect-[1/0.86]">
-                  <Image src={member.image} alt={member.imageAlt} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover transition-transform duration-700 hover:scale-105" />
-                </div>
-                <div className="min-h-36 px-4 pb-4 pt-3 text-white sm:px-5 sm:pb-5">
-                  <h3 className="font-heading text-lg font-semibold leading-tight sm:text-xl">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium text-white/80">{member.role}</p>
-                  <p className="mt-2 text-sm leading-5 text-white/90">{member.description}</p>
-                  <div className="mt-3 flex items-center gap-2.5">
-                    {member.socialLinks.map((social) => {
-                      const Icon = getSocialIcon(social.platform);
-                      if (!Icon) return null;
-                      return (
-                        <a key={social.id} href={social.url} aria-label={`${member.name} on ${social.platform}`} className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm text-[var(--color-primary)] transition-colors hover:bg-[var(--color-secondary)]">
-                          <Icon aria-hidden="true" />
-                        </a>
-                      );
-                    })}
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+              <div className="px-5 pb-6 pt-5 text-center">
+                <h3 className="font-heading text-xl font-bold leading-tight text-[var(--color-heading)] lg:text-2xl">
+                  {member.name}
+                </h3>
+                <p className="mt-1 text-base font-semibold text-[var(--color-accent-light)]">
+                  {member.role}
+                </p>
+                <span aria-hidden="true" className="mx-auto mt-4 block h-0.5 w-10 bg-[var(--color-accent-light)]" />
+                <p className="mt-4 text-sm leading-6 text-[var(--color-text-light)]">
+                  {member.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

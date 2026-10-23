@@ -39,7 +39,7 @@ export const Footer = ({ data }: FooterProps) => {
   if (!data) return null;
 
   return (
-    <footer className="bg-[#edf4ff]">
+    <footer className="bg-[var(--color-bg-alt)]">
 
       {/* Top — Logo + Pet Image */}
       <div className="flex flex-col items-center pt-10 pb-0 relative overflow-hidden">
@@ -47,8 +47,8 @@ export const Footer = ({ data }: FooterProps) => {
         {/* Paw print watermark — left side */}
         <svg
           viewBox="0 0 200 220"
-          className="absolute -left-8 top-1/2 -translate-y-1/2 w-[180px] h-[200px] md:w-[220px] md:h-[240px] pointer-events-none select-none z-0"
-          fill="#c6dffa"
+          className="absolute -left-8 top-1/2 -translate-y-1/2 w-[180px] h-[200px] md:w-[220px] md:h-[240px] pointer-events-none select-none z-0 text-[var(--color-secondary)] opacity-60"
+          fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
           <ellipse cx="100" cy="150" rx="55" ry="48" />
@@ -80,23 +80,23 @@ export const Footer = ({ data }: FooterProps) => {
       </div>
 
       {/* Divider line above columns */}
-      <div className="border-t border-[#c7ddf7]" />
+      <div className="border-t border-[var(--color-border)]" />
 
       {/* Three Columns */}
       <div className="max-w-[1100px] mx-auto px-4 lg:px-8 py-8 lg:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#c7ddf7]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y divide-[var(--color-border)] md:divide-x md:divide-y-0">
 
           {/* CONTACT */}
           <div className="px-0 md:px-8 pb-8 md:pb-0">
-            <h4 className="text-xs font-bold tracking-[0.18em] text-[#0b3d91] uppercase mb-4 flex items-center gap-2">
+            <h4 className="text-xs font-bold tracking-[0.18em] text-[var(--color-primary)] uppercase mb-4 flex items-center gap-2">
               {data.contactTitle}
-              <span className="flex-1 h-px bg-[#4b9cff] max-w-[40px]" />
+              <span className="flex-1 h-px bg-[var(--color-accent-light)] max-w-[40px]" />
             </h4>
             <ul className="flex flex-col gap-4">
               {data.contactItems.map((item) => (
                 <li key={item.id} className="flex items-start gap-3">
                   {/* Icon bubble */}
-                  <span className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-white text-[#0b3d91] shadow-sm text-sm">
+                  <span className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[var(--color-white)] text-[var(--color-primary)] shadow-sm text-sm">
                     {renderContactIcon(item.icon)}
                   </span>
                   {item.url ? (
@@ -104,12 +104,12 @@ export const Footer = ({ data }: FooterProps) => {
                       href={item.url}
                       target={item.url.startsWith('http') ? '_blank' : undefined}
                       rel={item.url.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="text-[#354969] hover:text-[#0b3d91] transition-colors duration-200 text-sm leading-snug mt-1.5"
+                      className="text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors duration-200 text-sm leading-snug mt-1.5"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <span className="text-[#354969] text-sm leading-snug mt-1.5">{item.value}</span>
+                    <span className="text-[var(--color-text)] text-sm leading-snug mt-1.5">{item.value}</span>
                   )}
                 </li>
               ))}
@@ -118,16 +118,16 @@ export const Footer = ({ data }: FooterProps) => {
 
           {/* MENU */}
           <div className="px-0 md:px-8 py-8 md:py-0">
-            <h4 className="text-xs font-bold tracking-[0.18em] text-[#0b3d91] uppercase mb-4 flex items-center gap-2">
+            <h4 className="text-xs font-bold tracking-[0.18em] text-[var(--color-primary)] uppercase mb-4 flex items-center gap-2">
               {data.quickLinksTitle}
-              <span className="flex-1 h-px bg-[#4b9cff] max-w-[40px]" />
+              <span className="flex-1 h-px bg-[var(--color-accent-light)] max-w-[40px]" />
             </h4>
             <ul className="flex flex-col gap-2.5">
               {data.quickLinks.map((link) => (
                 <li key={link.id}>
                   <Link
                     href={link.url}
-                    className="text-[#354969] hover:text-[#0b3d91] transition-colors duration-200 text-sm"
+                    className="text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors duration-200 text-sm"
                   >
                     {link.label}
                   </Link>
@@ -138,9 +138,9 @@ export const Footer = ({ data }: FooterProps) => {
 
           {/* SOCIAL */}
           <div className="px-0 md:px-8 pt-8 md:pt-0">
-            <h4 className="text-xs font-bold tracking-[0.18em] text-[#0b3d91] uppercase mb-4 flex items-center gap-2">
+            <h4 className="text-xs font-bold tracking-[0.18em] text-[var(--color-primary)] uppercase mb-4 flex items-center gap-2">
               {data.socialTitle}
-              <span className="flex-1 h-px bg-[#4b9cff] max-w-[40px]" />
+              <span className="flex-1 h-px bg-[var(--color-accent-light)] max-w-[40px]" />
             </h4>
             <ul className="flex flex-col gap-3">
               {data.socialLinks.map((social) => (
@@ -152,10 +152,10 @@ export const Footer = ({ data }: FooterProps) => {
                     aria-label={social.label}
                     className="flex items-center gap-3 group"
                   >
-                    <span className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-white text-[#0b3d91] shadow-sm text-sm group-hover:bg-[#0b3d91] group-hover:text-white transition-colors duration-200">
+                    <span className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full bg-[var(--color-white)] text-[var(--color-primary)] shadow-sm text-sm group-hover:bg-[var(--color-primary)] group-hover:text-[var(--color-white)] transition-colors duration-200">
                       {renderSocialIcon(social.icon)}
                     </span>
-                    <span className="text-[#354969] group-hover:text-[#0b3d91] transition-colors duration-200 text-sm">
+                    <span className="text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors duration-200 text-sm">
                       {social.label}
                     </span>
                   </a>
@@ -168,9 +168,9 @@ export const Footer = ({ data }: FooterProps) => {
       </div>
 
       {/* Bottom copyright bar */}
-      <div className="border-t border-[#c7ddf7]">
+      <div className="border-t border-[var(--color-border)]">
         <div className="max-w-[1100px] mx-auto px-4 lg:px-8 py-4 text-center">
-          <p className="text-xs text-[#6b7f9d]">{data.copyrightText}</p>
+          <p className="text-xs text-[var(--color-text-light)]">{data.copyrightText}</p>
         </div>
       </div>
 

@@ -4,8 +4,8 @@ import { Header } from '@/components/common/Header';
 import rawData from '@/data/templates.json';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
 import { AboutUs } from '@/components/sections/AboutUs';
-import { MissionVision } from '@/components/sections/MissionVision';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
+import { Testimonial } from '@/components/sections/Testimonial';
 import { Footer } from '@/components/common/Footer';
 
 export const dynamic = 'force-dynamic';
@@ -24,9 +24,9 @@ export default function Page() {
         <Header data={sectionData.Header?.variants?.PetHeader2} />
         <Breadcrumb data={commonData.aboutBreadcrumb} ui={commonData.globalUI} />
       </div>
-      <AboutUs data={sectionData.AboutUs?.variants?.PetAboutUs2} />
-      <MissionVision data={sectionData.MissionVision?.variants?.PetMissionVision2} />
+      <AboutUs data={sectionData.AboutUs?.variants?.PetAboutUs2} showButton={false} />
       <WhyChooseUs data={sectionData.whyChooseUs?.variants?.PetAboutWhyChooseUs2} />
+      <Testimonial data={sectionData.Testimonials?.variants?.PetTestimonials2} />
       <Footer data={commonData.Footer} />
     </main>
   );

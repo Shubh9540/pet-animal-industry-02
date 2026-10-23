@@ -3,7 +3,7 @@ import { PetTemplateData } from '@/types/templates.types';
 import rawData from '@/data/templates.json';
 import { Header } from '@/components/common/Header';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
-import { OurService } from '@/components/sections/OurService';
+import { ServicesPageContent } from '@/components/sections/ServicesPageContent';
 import { Footer } from '@/components/common/Footer';
 
 export const dynamic = 'force-dynamic';
@@ -22,7 +22,7 @@ export default function ServicesPage() {
         <Header data={sectionData.Header?.variants?.PetHeader2} />
         <Breadcrumb data={commonData.servicesBreadcrumb} ui={commonData.globalUI} />
       </div>
-      <OurService data={sectionData.OurService?.variants?.PetOurService2} />
+      <ServicesPageContent data={sectionData.ServicesPage?.variants?.PetServicesPage2} />
       <Footer data={commonData.Footer} />
     </main>
   );

@@ -1,4 +1,3 @@
-import React from 'react';
 import rawData from '@/data/templates.json';
 import { PetTemplateData } from '@/types/templates.types';
 import { Header } from '@/components/common/Header';
@@ -17,11 +16,8 @@ export default function FaqsPage() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--color-white)]">
-      <div className="contents">
-
-        <Header data={sectionData.Header?.variants?.PetHeader2} />
-        <Breadcrumb data={commonData.faqsBreadcrumb} ui={commonData.globalUI} />
-      </div>
+      <Header data={sectionData.Header?.variants?.PetHeader2} />
+      <Breadcrumb data={commonData.faqsBreadcrumb} ui={commonData.globalUI} />
       <Faq data={sectionData.Faq?.variants?.PetFaq2} />
       <Footer data={commonData.Footer} />
     </main>

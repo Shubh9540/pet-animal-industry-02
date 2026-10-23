@@ -1,4 +1,3 @@
-import React from 'react';
 import { PetTemplateData } from '@/types/templates.types';
 import rawData from '@/data/templates.json';
 import { Header } from '@/components/common/Header';
@@ -17,14 +16,9 @@ export default function ContactPage() {
 
   return (
     <main className="bg-[var(--color-white)]">
-      <div className="contents">
-
-        <Header data={sectionData.Header?.variants?.PetHeader2} />
-        <Breadcrumb data={commonData.contactBreadcrumb} ui={commonData.globalUI} />
-      </div>
-      
+      <Header data={sectionData.Header?.variants?.PetHeader2} />
+      <Breadcrumb data={commonData.contactBreadcrumb} ui={commonData.globalUI} />
       <Contact data={sectionData.contact?.variants?.PetContact2} />
-
       <Footer data={commonData.Footer} />
     </main>
   );
